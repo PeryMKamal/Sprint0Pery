@@ -1,0 +1,147 @@
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~
+$ git config --global user.name "PeryMKamal"
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~
+$ git config --global user.email "perihan.hussien@student.guc.edu.eg"
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~
+$ git config --global colour.ui true
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~
+$ mkdir sprint0pery
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~
+$ cd sprint0pery
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery
+$ git init
+Initialized empty Git repository in C:/Users/User/sprint0pery/.git/
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git add --all
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   F1.txt
+        new file:   F2.txt
+        new file:   F3.txt
+
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git commit -m "I Have added the 3 files"
+[master (root-commit) 53ae279] I Have added the 3 files
+ 3 files changed, 27 insertions(+)
+ create mode 100644 F1.txt
+ create mode 100644 F2.txt
+ create mode 100644 F3.txt
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git rm --cached F2.txt
+rm 'F2.txt'
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    F2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+[master 6c113a7] Revert "I have deleted the second file"
+ 1 file changed, 12 insertions(+)
+ create mode 100644 F2.txt
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git commit -m "I have reverted the file back"
+On branch master
+nothing to commit, working tree clean
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git remote add origin https://github.com/PeryMKamal/Sprint0Pery.git
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git push -u origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.75 KiB | 1.38 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/PeryMKamal/Sprint0Pery.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git remote -v
+origin  https://github.com/PeryMKamal/Sprint0Pery.git (fetch)
+origin  https://github.com/PeryMKamal/Sprint0Pery.git (push)
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git branch ReadMe
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (ReadMe)
+$ git status
+On branch ReadMe
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (ReadMe)
+$ git add README.md
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (ReadMe)
+$ git commit -m"I added the read me file"
+[ReadMe 3d0db97] I added the read me file
+ 1 file changed, 10 insertions(+)
+ create mode 100644 README.md
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (ReadMe)
+$ git status
+On branch ReadMe
+nothing to commit, working tree clean
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git merge ReadMe
+Updating 6c113a7..3d0db97
+Fast-forward
+ README.md | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ create mode 100644 README.md
+
+Pery Kamal@DESKTOP-KA58HD4 MINGW32 ~/sprint0pery (master)
+$ git commit -m "I merged the Readme branch with the master branch"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
